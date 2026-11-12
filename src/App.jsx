@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 import { weddingAudio } from './audioHelper'
 import palaceClean from './assets/palace-clean.jpg'
+import couplePhoto from './assets/couple-photo.jpg'
 import './App.css'
 
 /* ═══════════════════════════════════════════════════════════
@@ -386,17 +387,43 @@ function App() {
         </section>
 
         {/* ────────────────────────────────────
-            SCREEN 4: OUR LOCATION (Image 4)
+            SCREEN 3.5: COUPLE PORTRAIT
             ──────────────────────────────────── */}
-        <section className="content-section location-section" id="location">
-          <p className="section-eyebrow transition-eyebrow">EVERY MOMENT · TOGETHER</p>
-
+        <section className="content-section couple-section" id="couple">
           <div className="ornament-divider">
             <span className="ornament-line" />
             <span className="ornament-diamond">◇</span>
             <span className="ornament-line" />
           </div>
 
+          <div className="couple-photo-wrapper">
+            <div className="couple-photo-card">
+              <img
+                src={couplePhoto}
+                alt="Mostafa & Sara"
+                className="couple-photo-img"
+                loading="lazy"
+              />
+              <div className="couple-photo-glow" />
+            </div>
+          </div>
+
+          <div className="couple-caption-block">
+            <h3 className="couple-names-caption">{CONFIG.groomName} &amp; {CONFIG.brideName}</h3>
+            <p className="couple-quote">"Two lives, two hearts, joined together in friendship, united forever in love."</p>
+          </div>
+
+          <div className="dot-divider">
+            <span className="dot-line" />
+            <span className="dot-symbol">•</span>
+            <span className="dot-line" />
+          </div>
+        </section>
+
+        {/* ────────────────────────────────────
+            SCREEN 4: OUR LOCATION (Image 4)
+            ──────────────────────────────────── */}
+        <section className="content-section location-section" id="location">
           <p className="section-eyebrow">OUR LOCATION</p>
 
           <div className="ornament-divider small-divider">

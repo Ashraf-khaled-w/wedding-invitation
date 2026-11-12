@@ -3,6 +3,39 @@
    Responsive Full-Experience Website with Mobile-First Ratios
    ========================================================================== */
 
+/* ─── LOCAL FONT FACES (Guaranteed Offline & Fast Rendering) ─── */
+@font-face {
+  font-family: 'Great Vibes';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/GreatVibes-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Alex Brush';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/AlexBrush-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Cinzel';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/fonts/Cinzel-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/fonts/CormorantGaramond-Regular.woff2') format('woff2');
+}
+
 /* ─── COLOR VARIABLES & FONTS ─── */
 :root {
   --bg-sand: #F4EFE6;
@@ -21,7 +54,7 @@
   --text-gold: #9B783E;
   --text-sub: #A88F6D;
 
-  --font-script: 'Alex Brush', cursive;
+  --font-script: 'Great Vibes', 'Alex Brush', 'Brush Script MT', 'Lucida Calligraphy', cursive;
   --font-serif: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
   --font-display: 'Playfair Display', Georgia, serif;
   --font-caps: 'Cinzel', 'Montserrat', serif;
@@ -773,6 +806,89 @@ body {
   color: var(--text-gold);
   margin-top: 14px;
   text-align: center;
+}
+
+/* ══════════════════════════════════════════════════════════
+   COUPLE PORTRAIT SECTION
+   ══════════════════════════════════════════════════════════ */
+.couple-section {
+  background: var(--bg-sand);
+  padding: 30px 20px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.couple-photo-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 340px;
+  margin: 18px auto 14px;
+  padding: 9px;
+  background: linear-gradient(145deg, #FFFDF8 0%, #F5ECDD 100%);
+  border-radius: 26px;
+  box-shadow: 
+    0 12px 35px rgba(107, 77, 43, 0.12),
+    0 2px 10px rgba(197, 157, 91, 0.2),
+    inset 0 0 0 1px rgba(197, 157, 91, 0.45);
+}
+
+.couple-photo-card {
+  position: relative;
+  width: 100%;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: inset 0 0 14px rgba(107, 77, 43, 0.18);
+  background-color: #ebdcc8;
+  aspect-ratio: 3 / 4;
+}
+
+.couple-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.couple-photo-wrapper:hover .couple-photo-img {
+  transform: scale(1.025);
+}
+
+.couple-photo-glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: 18px;
+  box-shadow: inset 0 0 24px rgba(107, 77, 43, 0.18);
+  background: radial-gradient(circle at 50% 30%, transparent 65%, rgba(107, 77, 43, 0.12) 100%);
+}
+
+.couple-caption-block {
+  text-align: center;
+  margin-top: 14px;
+  max-width: 320px;
+}
+
+.couple-names-caption {
+  font-family: var(--font-script);
+  font-size: clamp(34px, 8.5vw, 44px);
+  font-weight: 400;
+  color: var(--text-dark);
+  margin: 0 0 6px;
+  line-height: 1.2;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9);
+}
+
+.couple-quote {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: var(--text-medium);
+  margin: 0 0 12px 0;
 }
 
 /* ══════════════════════════════════════════════════════════
